@@ -1,0 +1,21 @@
+export PATH="/opt/local/sbin:/opt/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+export SDKMAN_DIR="$HOME/lib/sdkman"
+export PYENV_ROOT="$HOME/lib/pyenv"
+
+test -d "/opt/homebrew" && eval "$(/opt/homebrew/bin/brew shellenv)"
+test -d "/usr/local/Homebrew" && eval "$(/usr/local/Homebrew/bin/brew shellenv)"
+test -d "/home/linuxbrew/.linuxbrew" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+if [[ -o interactive && -x "$(command -v tmux)" && -z "$TMUX" ]]; then
+  if [[ "$TERM_PROGRAM" = "Alacritty" || ( -n "$SSH_CONNECTION" && "$LC_TERMINAL" == "iTerm2" ) ]]; then
+    exec tmux new-session -A -s basic
+  fi
+fi
+
+# brew install --formula reattach-to-user-namespace
+# brew install --formula aria2 atuin bat choose-rust dust eza fd fnm git git-delta gnu-sed gping helix hyperfine jq miniserve nomino procs ripgrep ruff-lsp sd silicon starship tmux topgrade uutils-coreutils uv wget xh xsv zoxide
+# brew install --cask alacritty espanso font-jetbrains-mono-nerd-font font-lxgw-wenkai font-maple-mono-nf font-maple-mono-nf-cn neovide squirrel
+
+# sudo port -f deactivate libiconv
+# cargo install cargo-make cargo-update
+# sudo port -f activate libiconv

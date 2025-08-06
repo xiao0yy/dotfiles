@@ -1,0 +1,60 @@
+[colors.bright]
+black = "#575b70"
+blue = "#caa9fa"
+cyan = "#9aedfe"
+green = "#5af78e"
+magenta = "#ff92d0"
+red = "#ff6e67"
+white = "#e6e6e6"
+yellow = "#f4f99d"
+
+[colors.normal]
+black = "#000000"
+blue = "#caa9fa"
+cyan = "#8be9fd"
+green = "#50fa7b"
+magenta = "#ff79c6"
+red = "#ff5555"
+white = "#bfbfbf"
+yellow = "#f1fa8c"
+
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[cursor]
+style = "Underline"
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+TERM_PROGRAM = "Alacritty"
+
+[font]
+size = 13
+
+[font.bold]
+family = "Maple Mono NF CN"
+style = "ExtraBold"
+
+[font.bold_italic]
+family = "Maple Mono NF CN"
+style = "ExtraBold Italic"
+
+[font.italic]
+family = "Maple Mono NF CN"
+style = "Italic"
+
+[font.normal]
+family = "Maple Mono NF CN"
+style = "Regular"
+
+[window]
+decorations = "full"
+dynamic_title = true
+opacity = 1.0
+startup_mode = "Maximized"
+
+[window.padding]
+x = 8
+y = 8
