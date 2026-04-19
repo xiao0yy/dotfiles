@@ -2,6 +2,8 @@ export PATH="/opt/local/sbin:/opt/local/bin:/usr/local/sbin:/usr/local/bin:/usr/
 export SDKMAN_DIR="$HOME/lib/sdkman"
 export PYENV_ROOT="$HOME/lib/pyenv"
 
+test -f "$HOME/.zshenv.local" && source "$HOME/.zshenv.local"
+
 test -d "/opt/homebrew" && eval "$(/opt/homebrew/bin/brew shellenv)"
 test -d "/usr/local/Homebrew" && eval "$(/usr/local/Homebrew/bin/brew shellenv)"
 test -d "/home/linuxbrew/.linuxbrew" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
