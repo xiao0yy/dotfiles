@@ -29,11 +29,11 @@ zinit as"null" lucid light-mode for \
 
 zinit as"null" wait lucid light-mode for \
     pick'empty.zsh' atload"alias cat='bat --style plain,header,header-filesize,grid'
-                           alias l='eza -lbghH --icons=always $@'
-                           alias ll='eza -lbghH --icons=always $@'
-                           alias la='eza -labghH --icons=always $@'
-                           alias ld='eza -lDbghH --icons=always $@'
-                           alias lad='eza -laDbghH --icons=always $@'
+                           alias l='eza -lbghH --icons=always'
+                           alias ll='eza -lbghH --icons=always'
+                           alias la='eza -labghH --icons=always'
+                           alias ld='eza -lDbghH --icons=always'
+                           alias lad='eza -laDbghH --icons=always'
                            alias http='xh'
                            alias https='xh'" xiao0yy/shell \
     pick'empty.zsh' atload'export ATUIN_NOBIND="true"
@@ -43,13 +43,15 @@ zinit as"null" wait lucid light-mode for \
                            eval "$(zoxide init zsh --no-cmd)"
                            alias cdi="__zoxide_zi"' xiao0yy/shell
 
-zinit wait lucid light-mode for \
+zinit lucid light-mode for \
     atinit"zicompinit; zicdreplay" \
         zdharma-continuum/fast-syntax-highlighting \
     atload"_zsh_autosuggest_start" \
         zsh-users/zsh-autosuggestions \
     blockf atpull'zinit creinstall -q .' \
-        zsh-users/zsh-completions \
+        zsh-users/zsh-completions
+
+zinit wait lucid light-mode for \
     wfxr/forgit \
     Aloxaf/fzf-tab
 
